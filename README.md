@@ -6,7 +6,7 @@ Sample security case studies (educational purposes)
 
 ## Summary
 
-A reflected cross-site scripting vulnerability was identified in a search endpoint.
+I identified a reflected cross-site scripting vulnerability in a search endpoint.
 User-controlled input was rendered without proper output encoding.
 
 The issue was responsibly reported to the vendor.
@@ -48,4 +48,3 @@ Sanitized screenshot:
 ---
 
 Independent Security Researcher  
-Averon Averenkov
