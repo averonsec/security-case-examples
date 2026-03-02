@@ -25,7 +25,7 @@ To reproduce the vulnerability, send the following POST request to the target: [
 
 ```http
 POST /webadm/?q=moni_detail.do&action=gragh HTTP/1.1
-Host: <TARGET_IP>:8080
+Host: <TARGET_IP>:<PORT>
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 29
 
