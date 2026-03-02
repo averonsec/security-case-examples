@@ -3,26 +3,26 @@
 > [!IMPORTANT]
 > **Vulnerability Discovery:** Identified a **Critical Remote Code Execution (RCE)** in the AJ-Report data visualization platform. 
 > 
-> By exploiting the `validationRules` parameter and bypassing filters via the `;swagger-ui/` endpoint, I achieved **full system command execution** with **root** privileges. [1.1, 1.2]
+> By exploiting the `validationRules` parameter and bypassing filters via the `;swagger-ui/` endpoint, I achieved **full system command execution** with **root** privileges.
 
 ---
 
 ## 🔍 Vulnerability Type
-*   **Vulnerability Name:** Remote Code Execution (RCE) via Expression Injection [1.2]
-*   **CVE/CNVD ID:** CNVD-2024-15077 (High/Critical) [1.1]
-*   **Attack Vector:** Unauthenticated JSON Injection [1.2]
+*   **Vulnerability Name:** Remote Code Execution (RCE) via Expression Injection 
+*   **CVE/CNVD ID:** CNVD-2024-15077 (High/Critical) 
+*   **Attack Vector:** Unauthenticated JSON Injection 
 
 ## 💥 Impact
 This vulnerability allows for a **Total System Takeover**:
 
-*   **Root Level Access:** Execution of arbitrary commands as `uid=0(root)`. [1.1, 1.3]
-*   **Data Exfiltration:** Full access to all business reports, datasets, and internal databases. [3.1]
-*   **Identity Theft:** Massive leakage of active JWT tokens (`accessToken`, `refreshToken`) and session identifiers. [1.1, 2.1]
-*   **Persistence:** Ability to install backdoors or pivot further into the internal network. [3.1]
+*   **Root Level Access:** Execution of arbitrary commands as `uid=0(root)`.
+*   **Data Exfiltration:** Full access to all business reports, datasets, and internal databases.
+*   **Identity Theft:** Massive leakage of active JWT tokens (`accessToken`, `refreshToken`) and session identifiers.
+*   **Persistence:** Ability to install backdoors or pivot further into the internal network.
 
 ## 🛠 Proof of Concept (PoC)
 
-I used a Java-based payload within the `validationRules` parameter to execute system commands: [1.2]
+I used a Java-based payload within the `validationRules` parameter to execute system commands:
 
 ```http
 POST /dataSetParam/verification;swagger-ui/ HTTP/1.1
@@ -40,7 +40,7 @@ Content-Type: application/json
 
 Click on the image to view it in high resolution
 
-Server Response (Exploited): [1.1]
+Server Response (Exploited):
 "xmsg": "Successfully\nuid=0(root) gid=0(root) groups=0(root)\nroot..."
 
 ## 📊 Severity
@@ -54,10 +54,10 @@ Server Response (Exploited): [1.1]
 
 ## 🛡 Remediation
 
-1.  **Update Software:** Apply the latest security patches for AJ-Report immediately. [3.1]
-2.  **Input Filtering:** Sanitize and restrict the usage of dynamic scripting in `validationRules`. [3.1]
-3.  **Firewall:** Restrict access to management and reporting interfaces using a VPN or IP whitelist. [3.1]
+1.  **Update Software:** Apply the latest security patches for AJ-Report immediately.
+2.  **Input Filtering:** Sanitize and restrict the usage of dynamic scripting in `validationRules`.
+3.  **Firewall:** Restrict access to management and reporting interfaces using a VPN or IP whitelist.
 
 ---
-*Responsible disclosure. Educational purposes only.* [3.1]
+*Responsible disclosure. Educational purposes only.*
 
