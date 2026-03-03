@@ -1,50 +1,28 @@
-# Security-case-examples
-Sample security case studies (educational purposes)
+# 🛡️ Security Case Examples
 
-
-# Reflected XSS – Case Study
-
-## Summary
-
-I identified a reflected cross-site scripting vulnerability in a search endpoint.
-User-controlled input was rendered without proper output encoding.
-
-The issue was responsibly reported to the vendor.
-This document contains a sanitized technical summary.
-
-## Vulnerability Type
-Reflected Cross-Site Scripting (XSS)
-
-## Affected Component
-Search functionality (query parameter)
-
-## Technical Details
-
-The application reflects user input directly into the HTML response.
-No output encoding was applied before rendering.
-
-As a result, arbitrary JavaScript execution was possible in the user’s browser context.
-
-## Impact
-
-- Session token exposure (if not protected by HttpOnly)
-- Account takeover risk
-- Client-side content manipulation
-- Phishing or redirection scenarios
-
-## Proof of Concept
-
-Sanitized screenshot:
-
-<img width="1313" height="444" alt="xss cookie2" src="https://github.com/user-attachments/assets/09515401-69ca-4b71-a18d-7d9c93e931d9" />
-
-## Remediation
-
-- Strict input validation
-- Context-aware output encoding
-- Apply HttpOnly and Secure flags to session cookies
-- Consider Content Security Policy (CSP)
+Welcome to my security research repository. This project serves as a curated collection of real-world vulnerability case studies identified during security assessments. Each case includes a technical summary, proof of concept (PoC), and remediation steps.
 
 ---
 
-Independent Security Researcher  
+## 📂 Vulnerability Case Studies
+
+
+| Case Study | Vulnerability Type | Severity | Link |
+| :--- | :--- | :--- | :--- |
+| **Eaton IPM RCE** | Remote Code Execution | 🔴 Critical | [View Case](./cases/rce-eaton-ipm/) |
+| **AJ-Report RCE** | Remote Code Execution | 🔴 Critical | [View Case](./cases/rce-aj-report/) |
+| **Weaver e-cology RCE** | Remote Code Execution | 🔴 Critical | [View Case](./cases/rce-weaver-ecology/) |
+| **Host Header SSRF** | Server-Side Request Forgery | 🟠 High | [View Case](./cases/ssrf-host-header/) |
+| **Reflected XSS** | Cross-Site Scripting | 🟡 Medium | [View Case](./cases/reflected-xss/) |
+
+---
+
+## 🎯 Research Focus
+My research primarily focuses on identifying critical flaws in enterprise software, data visualization platforms, and power management systems.
+
+*   **Remote Exploitation:** Identifying unauthenticated entry points in web applications.
+*   **Infrastructure Security:** Assessing the security posture of critical management interfaces.
+*   **Data Integrity:** Analyzing input sanitization and output encoding mechanisms.
+
+---
+*Disclaimer: All research is conducted for educational purposes and follows responsible disclosure principles. Unauthorized access is strictly prohibited.*
