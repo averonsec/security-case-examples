@@ -14,7 +14,7 @@ Welcome to my security research repository. This project serves as a curated col
 | **AJ-Report RCE** | Remote Code Execution | 🔴 Critical | [View Case](./cases/rce-aj-report/) |
 | **Weaver e-cology RCE** | Remote Code Execution | 🔴 Critical | [View Case](./cases/rce-weaver-ecology/) |
 | **Host Header SSRF** | Server-Side Request Forgery | 🟠 High | [View Case](./cases/ssrf-host-header/) |
-| **Reflected XSS** | Cross-Site Scripting | 🟡 Medium | [View Case](./cases/reflected-xss/) |
+| Full SSRF Jira | Server-Side Request Forgery | 🔴 Critical | [View Case](./cases/ssrf-jira-icon) |
 
 ---
 
