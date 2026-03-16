@@ -9,7 +9,7 @@ Welcome to my security research repository. This project serves as a curated col
 
 | Case Study | Vulnerability Type | Severity | Link |
 | :--- | :--- | :--- | :--- |
-| **Hals-Development RCE** | Remote Code Execution | 🔴 Critical | [View Case](./cases/rce-gals-tender/) |
+| **Real Estate (VTB Group) RCE** | Remote Code Execution | 🔴 Critical | [View Case](./cases/rce-gals-tender/) |
 | **SOAP DataService LFI** | Arbitrary File Read | 🔴 Critical | [View Case](./cases/unauthenticated-lfi-soap/) |
 | **Eaton IPM RCE** | Remote Code Execution | 🔴 Critical | [View Case](./cases/rce-eaton-ipm/) |
 | **AJ-Report RCE** | Remote Code Execution | 🔴 Critical | [View Case](./cases/rce-aj-report/) |
