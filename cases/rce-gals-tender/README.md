@@ -35,7 +35,7 @@ To confirm control over the server's file-processing logic, I injected a custom 
 The web server configuration fails to restrict access to the hidden **`.git`** directory. This allows for the complete reconstruction of the platform's source code, exposing internal repository URLs and developer history.
 
 #### Evidence of .git/config Access:
-By accessing the hidden `.git/config` file, I confirmed the exposure of the project's internal repository structure (`hals-tenders.git`).
+By accessing the hidden `.git/config` file, I confirmed the exposure of the project's internal repository structure (`-tenders.git`).
 
 <a href="https://github.com/user-attachments/assets/f404d1e3-d95f-4d2d-8b44-265846c7b39a" target="_blank">
   <img src="https://github.com/user-attachments/assets/f404d1e3-d95f-4d2d-8b44-265846c7b39a" width="100%" alt="Git Config Leak Proof - Click to enlarge" />
