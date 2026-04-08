@@ -1,4 +1,4 @@
-# 🛡️ Infrastructure Audit: Major Real Estate Developer (VTB Group Subsidiary)
+# 🛡️ Infrastructure Audit: Major Enterprise Real Estate Developer
 
 > [!CAUTION]
 > **Security Research Discovery:** I identified a combined critical vulnerability chain on the official tender platform of a **top-tier Russian developer**. The flaws allow for **Unauthenticated Remote Code Execution (RCE)** and a **Full Source Code Leak** via an exposed `.git` directory.
@@ -6,8 +6,8 @@
 ---
 
 ## 🔍 Target Overview
-*   **Organization:** Confidential (Major Real Estate Developer, VTB Group Subsidiary).
-*   **Asset:** `tenders.REDACTED.ru` (Tender & Procurement Platform).
+*   **Organization:** Confidential (Large Real Estate Holding.
+*   **Asset:** `tenders.target-portal.ru` (Tender & Procurement Platform).
 *   **Severity:** 🔴 **CRITICAL (10.0/10.0)**
 *   **Vulnerability Types:** CVE-2022-27228 (RCE) & Sensitive Data Exposure (.git).
 
@@ -35,10 +35,10 @@ To confirm control over the server's file-processing logic, I injected a custom 
 The web server configuration fails to restrict access to the hidden **`.git`** directory. This allows for the complete reconstruction of the platform's source code, exposing internal repository URLs and developer history.
 
 #### Evidence of .git/config Access:
-By accessing the hidden `.git/config` file, I confirmed the exposure of the project's internal repository structure (`-tenders.git`).
+By accessing the hidden `.git/config` file, I confirmed the exposure of the project's internal repository structure (`internal repository structure`).
 
-<a href="https://github.com/user-attachments/assets/f404d1e3-d95f-4d2d-8b44-265846c7b39a" target="_blank">
-  <img src="https://github.com/user-attachments/assets/f404d1e3-d95f-4d2d-8b44-265846c7b39a" width="100%" alt="Git Config Leak Proof - Click to enlarge" />
+<a href="https://github.com/user-attachments/assets/dbfb8d9c-3d1f-4f95-8042-f32e19a8121a" target="_blank">
+  <img src="https://github.com/user-attachments/assets/dbfb8d9c-3d1f-4f95-8042-f32e19a8121a" width="100%" alt="Git Config Leak Proof - Click to enlarge" />
 </a>
 
 ---
