@@ -14,7 +14,7 @@ Welcome to my security research repository. This project serves as a curated col
 | **Eaton IPM RCE** | Remote Code Execution | 🔴 Critical | [View Case](./cases/rce-eaton-ipm/) |
 | **AJ-Report RCE** | Remote Code Execution | 🔴 Critical | [View Case](./cases/rce-aj-report/) |
 | **Weaver e-cology RCE** | Remote Code Execution | 🔴 Critical | [View Case](./cases/rce-weaver-ecology/) |
-| **Host Header SSRF** | Server-Side Request Forgery | 🟠 High | [View Case](./cases/ssrf-host-header/) |
+| Miliex Crypto XSS | Cross-Site Scripting (XSS) | 🟠 High | [View Case](./cases/xss-miliex-crypto/) |
 | Full SSRF Jira | Server-Side Request Forgery | 🔴 Critical | [View Case](./cases/ssrf-jira-icon) |
 
 ---
